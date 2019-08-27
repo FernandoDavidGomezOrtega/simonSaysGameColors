@@ -3,7 +3,7 @@ const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 1
+const ULTIMO_NIVEL = 10
 
 class Juego {
   constructor() {
@@ -31,7 +31,7 @@ class Juego {
     if(btnEmpezar.classList.contains('hide')){
       btnEmpezar.classList.remove('hide')
     } else {
-      btnEmpezar.classList.add('hide')      
+      btnEmpezar.classList.add('hide')  
     }
   }
 
@@ -109,6 +109,7 @@ class Juego {
       this.subnivel++
       if (this.subnivel === this.nivel) {
         this.nivel++
+        
         this.eliminarEventosClick()
         if (this.nivel === (ULTIMO_NIVEL + 1)) {
           this.ganoElJuego()
