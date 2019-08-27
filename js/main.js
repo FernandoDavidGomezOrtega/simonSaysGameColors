@@ -27,11 +27,11 @@ class Juego {
     }
   }
 
-  toggleBtnEmpezar(){
-    if(btnEmpezar.classList.contains('hide')){
+  toggleBtnEmpezar() {
+    if (btnEmpezar.classList.contains('hide')) {
       btnEmpezar.classList.remove('hide')
     } else {
-      btnEmpezar.classList.add('hide')  
+      btnEmpezar.classList.add('hide')
     }
   }
 
@@ -41,6 +41,7 @@ class Juego {
 
   siguienteNivel() {
     this.subnivel = 0
+    this.eliminarEventosClick()
     this.iluminarSecuencia()
     this.agregarEventosClick()
   }
@@ -109,12 +110,15 @@ class Juego {
       this.subnivel++
       if (this.subnivel === this.nivel) {
         this.nivel++
-        
         this.eliminarEventosClick()
         if (this.nivel === (ULTIMO_NIVEL + 1)) {
           this.ganoElJuego()
         } else {
-          setTimeout(this.siguienteNivel, 1500)
+          swal('Muy bien!', 'Pasas al siguiente nivel', 'success')
+          .then(() => {
+            setTimeout(this.siguienteNivel, 1500)
+          })
+
         }
       }
     } else {
