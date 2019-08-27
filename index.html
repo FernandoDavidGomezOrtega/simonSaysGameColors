@@ -7,7 +7,11 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <link rel="shortout icon" type="image/ico" href="favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  <!-- <link rel="shortout icon" type="image/ico" href="favicon.ico"> -->
     <meta charset="utf-8">
     <title>Simon Dice</title>
 
@@ -23,26 +27,13 @@
       <div id="verde" class="color verde right" data-color="verde"></div>
       <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
     </div>
-    <script>
-      const celeste = document.getElementById('celeste')
-      const violeta = document.getElementById('violeta')
-      const naranja = document.getElementById('naranja')
-      const verde = document.getElementById('verde')
-      const btnEmpezar = document.getElementById('btnEmpezar')
 
-      class Juego {
-        constructor() {
-          this.inicializar()
-        }
+    <!-- SweetAlert library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
 
-        inicializar() {
-          btnEmpezar.classList.add('hide')
-        }
-      }
+      <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/main.js"></script>
 
-      function empezarJuego() {
-        var juego = new Juego()
-      }
-    </script>
+
   </body>
 </html>
