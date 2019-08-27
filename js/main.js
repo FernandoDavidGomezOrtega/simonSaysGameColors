@@ -1,3 +1,5 @@
+swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia. \nEl juego consta de 10 niveles. \nSuerte!', 'info')
+
 const celeste = document.getElementById('celeste')
 const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
