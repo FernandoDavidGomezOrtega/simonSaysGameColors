@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia. \nEl juego consta de 10 niveles. \nSuerte!', 'info')
+  swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia. \nEl juego consta de 10 niveles.\nSuerte!', 'info')
   
   // Selector de tema
   var theme = $('#theme')
