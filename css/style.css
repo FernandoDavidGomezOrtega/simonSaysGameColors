@@ -10,9 +10,6 @@ body {
   display: grid;
   justify-content: center;
   height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
-  border: 1px solid red;
 }
 
 
@@ -83,7 +80,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    border: 1px solid green;
     height: 100vh;
     min-height: 100vh !important;
   }
