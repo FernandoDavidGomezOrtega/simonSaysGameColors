@@ -36,7 +36,7 @@ $(document).ready(function () {
   const naranja = document.getElementById('naranja')
   const verde = document.getElementById('verde')
   const btnEmpezar = document.getElementById('btnEmpezar')
-  const ULTIMO_NIVEL = 10
+  const ULTIMO_NIVEL = 1000
   
   class Juego {
     constructor() {
@@ -113,6 +113,7 @@ $(document).ready(function () {
   }
 
   iluminarColor(color) {
+    console.log(color)
     this.colores[color].classList.add('light')
     setTimeout(() => this.apagarColor(color), 350);
   }
@@ -144,8 +145,7 @@ $(document).ready(function () {
       if (this.subnivel === this.nivel) {
         this.nivel++
         this.eliminarEventosClick()
-        // if (this.nivel === (ULTIMO_NIVEL + 1)) {
-          if (false) {
+        if (this.nivel === (ULTIMO_NIVEL + 1)) {
           this.ganoElJuego()
         } else {
           swal('Muy bien!', 'Pasas al nivel ' + this.nivel, 'success')
