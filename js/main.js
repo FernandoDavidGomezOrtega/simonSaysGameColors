@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia. \nEl juego consta de 10 niveles.\nSuerte!', 'info')
+  // swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia. \nEl juego consta de 10 niveles.\nSuerte!', 'info')
+
+  swal('Bienvenido a Simón dice', 'Intenta seguir la secuencia.')
   
   // Selector de tema
   var theme = $('#theme')
@@ -142,7 +144,8 @@ $(document).ready(function () {
       if (this.subnivel === this.nivel) {
         this.nivel++
         this.eliminarEventosClick()
-        if (this.nivel === (ULTIMO_NIVEL + 1)) {
+        // if (this.nivel === (ULTIMO_NIVEL + 1)) {
+          if (false) {
           this.ganoElJuego()
         } else {
           swal('Muy bien!', 'Pasas al nivel ' + this.nivel, 'success')
